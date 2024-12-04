@@ -134,17 +134,17 @@ class AssetData:
         if self.get_lump_index('TEXTURE2'):
             texture_maps += self.load_texture_maps(texture_lump_name='TEXTURE2')
 
-        self.textures = {
+        self.wall_textures = {
             tex_map.name: Texture(self, tex_map).image for tex_map in texture_maps
         }
         # flat textures
-        self.textures |= self.get_flats()
+        self.flat_textures = self.get_flats()
 
         # --------------------------------------------------------------------------- #
         # sky
         self.sky_id = 'F_SKY1'
         self.sky_tex_name = 'SKY1'
-        self.sky_tex = self.textures[self.sky_tex_name]
+        self.sky_tex = self.wall_textures[self.sky_tex_name]
         # --------------------------------------------------------------------------- #
 
     def get_flats(self, start_marker='F_START', end_marker='F_END'):
