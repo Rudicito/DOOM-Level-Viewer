@@ -12,7 +12,7 @@ class ViewRenderer:
         self.asset_data = engine.wad_data.asset_data
         self.palette = self.asset_data.palette
         self.sprites = self.asset_data.sprites
-        self.wall_textures = self.asset_data.wall_textures
+        # self.wall_textures = self.asset_data.wall_textures
         self.flat_textures = self.asset_data.flat_textures
         self.player = engine.player
         self.screen = engine.screen
