@@ -11,7 +11,7 @@ class SegHandler:
         self.player = engine.player
         self.framebuffer = self.engine.framebuffer
         self.wall_textures = self.wad_data.asset_data.wall_textures
-        self.flat_textures = self.wad_data.asset_data.flat_textures
+        # self.flat_textures = self.wad_data.asset_data.flat_textures
         self.sky_id = self.wad_data.asset_data.sky_id
         #
         self.seg = None
